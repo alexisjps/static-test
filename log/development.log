@@ -1509,3 +1509,27 @@ Processing by FlatsController#index as HTML
 Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 3548)
 
 
+Started GET "/index" for ::1 at 2022-09-01 23:58:26 +0200
+Processing by FlatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:3
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 802)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3244)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 3530)
+
+
+Started GET "/index" for ::1 at 2022-09-02 00:00:58 +0200
+Processing by FlatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.4ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:3
+  Rendered flats/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 795)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3233)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.4ms | Allocations: 3511)
+
+
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "myapp_test" ENCODING = 'unicode'[0m
