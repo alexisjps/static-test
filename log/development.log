@@ -1474,3 +1474,38 @@ Processing by FlatsController#index as HTML
 Completed 200 OK in 98ms (Views: 84.4ms | ActiveRecord: 5.2ms | Allocations: 45412)
 
 
+Started GET "/index" for ::1 at 2022-09-01 23:57:56 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.7ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:3
+  Rendered flats/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5670)
+  Rendered layout layouts/application.html.erb (Duration: 76.7ms | Allocations: 41133)
+Completed 200 OK in 120ms (Views: 76.8ms | ActiveRecord: 4.5ms | Allocations: 45246)
+
+
+Started GET "/show/1" for ::1 at 2022-09-01 23:57:58 +0200
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2895)
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 5736)
+
+
+Started GET "/index" for ::1 at 2022-09-01 23:57:59 +0200
+Processing by FlatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:3
+  Rendered flats/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 811)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3254)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 3548)
+
+
