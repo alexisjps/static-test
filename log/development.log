@@ -1546,3 +1546,120 @@ Completed 200 OK in 101ms (Views: 85.8ms | ActiveRecord: 5.0ms | Allocations: 46
 
 
   [1m[36mFlat Load (0.6ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+Started GET "/" for ::1 at 2022-12-07 14:23:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexisstephan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexisstephan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 550)
+Completed 200 OK in 13ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3791)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (36.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapp_development"[0m
+  [1m[35m (40.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapp_test"[0m
+  [1m[35m (176.6ms)[0m  [1m[35mCREATE DATABASE "myapp_development" ENCODING = 'unicode'[0m
+  [1m[35m (77.0ms)[0m  [1m[35mCREATE DATABASE "myapp_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateFlats (20220901201612)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "flats" ("id" bigserial primary key, "name" character varying, "address" character varying, "pricing" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220901201612"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-12-07 13:23:47.047115"], ["updated_at", "2022-12-07 13:23:47.047115"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7864839756650184315)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mFlat Load (0.5ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (0.7ms)[0m  [1m[32mINSERT INTO "flats" ("name", "address", "pricing", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Light & Spacious Garden Flat London"], ["address", "10 Clifton Gardens London W9 1DT"], ["pricing", 6], ["created_at", "2022-12-07 13:23:48.138803"], ["updated_at", "2022-12-07 13:23:48.138803"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (0.3ms)[0m  [1m[32mINSERT INTO "flats" ("name", "address", "pricing", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Stylish House Close to River Thames"], ["address", "5A London"], ["pricing", 30], ["created_at", "2022-12-07 13:23:48.143382"], ["updated_at", "2022-12-07 13:23:48.143382"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (0.4ms)[0m  [1m[32mINSERT INTO "flats" ("name", "address", "pricing", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "My beautiful home"], ["address", "At Paris"], ["pricing", 89], ["created_at", "2022-12-07 13:23:48.146928"], ["updated_at", "2022-12-07 13:23:48.146928"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mFlat Create (0.3ms)[0m  [1m[32mINSERT INTO "flats" ("name", "address", "pricing", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "My Second home"], ["address", "At London"], ["pricing", 59], ["created_at", "2022-12-07 13:23:48.151223"], ["updated_at", "2022-12-07 13:23:48.151223"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2022-12-07 14:23:55 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/alexisstephan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/alexisstephan/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 550)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 3789)
+
+
+Started GET "/flats" for ::1 at 2022-12-07 14:23:57 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/flats"):
+  
+Started GET "/index" for ::1 at 2022-12-07 14:24:25 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FlatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.7ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:3
+  Rendered flats/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 5670)
+  Rendered layout layouts/application.html.erb (Duration: 90.7ms | Allocations: 42168)
+Completed 200 OK in 103ms (Views: 89.3ms | ActiveRecord: 4.6ms | Allocations: 46282)
+
+
+Started GET "/show/1" for ::1 at 2022-12-07 14:24:29 +0100
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 63.7ms | Allocations: 2980)
+Completed 200 OK in 88ms (Views: 64.4ms | ActiveRecord: 0.4ms | Allocations: 5822)
+
+
+Started GET "/index" for ::1 at 2022-12-07 14:24:31 +0100
+Processing by FlatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:3
+  Rendered flats/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 812)
+  Rendered layout layouts/application.html.erb (Duration: 67.3ms | Allocations: 3297)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.3ms | Allocations: 3595)
+
+
+Started GET "/show/2" for ::1 at 2022-12-07 14:24:32 +0100
+Processing by FlatsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFlat Load (0.2ms)[0m  [1m[34mSELECT "flats".* FROM "flats" WHERE "flats"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/flats_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering flats/show.html.erb within layouts/application
+  Rendered flats/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 60)
+  Rendered layout layouts/application.html.erb (Duration: 70.3ms | Allocations: 2551)
+Completed 200 OK in 92ms (Views: 71.0ms | ActiveRecord: 0.2ms | Allocations: 3351)
+
+
+Started GET "/index" for ::1 at 2022-12-07 14:24:34 +0100
+Processing by FlatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering flats/index.html.erb within layouts/application
+  [1m[36mFlat Load (0.3ms)[0m  [1m[34mSELECT "flats".* FROM "flats"[0m
+  ↳ app/views/flats/index.html.erb:3
+  Rendered flats/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 802)
+  Rendered layout layouts/application.html.erb (Duration: 65.2ms | Allocations: 3304)
+Completed 200 OK in 67ms (Views: 65.5ms | ActiveRecord: 0.3ms | Allocations: 3593)
+
+
